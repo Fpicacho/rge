@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>F-TemplateEngine</title>
+</head>
+<body>
+    <ul>
+
+    </ul>
+</body>
+    <script>
+        // function renderData(value,data){
+        //     let template = document.querySelector('ul').innerHTML
+        //     let node = document.querySelector('ul')
+        //     const Exp = new RegExp(`\{\{${value}\}\}`,'g')
+        //     template = template.replace(Exp,data)
+        //     node.innerHTML = template
+        // }
+        // renderData('Ava',"向晚")
+        const str = "<li>{{Ava}}</li>"
+        console.log(str.match(/\{\{\w+\}\}/))
+    </script>
+</html>

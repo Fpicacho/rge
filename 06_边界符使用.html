@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" name="userName"> <span class="isValue"></span>
+</body>
+<script>
+    // let hd = '1123123dsadsa'
+    // ^表示起始 $表示终止位置
+    // console.log(/^\d$/.test(hd))
+
+    let regexp = /^[a-z]{3,6}$/
+    let textInput = document.querySelector('[name="userName"]')
+    textInput.addEventListener('keyup', function () {
+        regexp.test(this.value)
+            ? document.querySelector('.isValue').innerText = '格式正确'
+            : document.querySelector('.isValue').innerText = '格式错误'
+    })
+</script>
+</html>

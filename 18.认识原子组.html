@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>我 的 鸡 它 八 岁 了</h1>
+    <h2>穆小泠Official </h2>
+    <p>我的鸡八岁了，它活的很快活。它每天吃喝玩乐比我还享受生活。</p>
+</body>
+<script>
+    const reg = /<(h[1-6])>[\s\S]*<\/\1>/gi
+    const body = document.body
+    console.log(body.innerHTML.match(reg))
+    body.innerHTML = body.innerHTML.replace(reg,'')
+</script>
+</html>

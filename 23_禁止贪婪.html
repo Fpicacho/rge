@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <main>
+        <span>珈乐</span>
+        <span>嘉然</span>
+        <span>乃林</span>
+        <span>向晚</span>
+        <span>贝拉</span>
+    </main>
+</body>
+<script>
+    const main = document.querySelector('main')
+    const reg = /<span>([\s\S]+?)<\/span>/gi
+    main.innerHTML = main.innerHTML.replace(reg,`<span style="color: red">$1-asoul</span>`)
+</script>
+</html>

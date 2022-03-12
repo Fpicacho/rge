@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="inputBox">
+        <input type="text" name="userName"/>
+        <span class="isTrue"></span>
+    </div>
+</body>
+<script>
+    const input = document.querySelector("[name='userName']");
+    const isTrue = document.querySelector(".isTrue")
+    const reg = /^[a-z]\w{3,10}$/i;
+    input.addEventListener('keyup',function (){
+        reg.test(this.value)?isTrue.innerText='':isTrue.innerText="验证失败"
+    })
+
+</script>
+</html>

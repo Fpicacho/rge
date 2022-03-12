@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input name="userName"/>
+<span class="errorContent"></span>
+</body>
+<script>
+    const userName = document.querySelector('[name=\'userName\']');
+    const errorContent = document.querySelector(".errorContent")
+    userName.addEventListener('keyup', function () {
+        let str = this.value
+        let reg = /^[a-zA-Z0-9]\w{3,10}$/
+        !reg.test(str)
+            ? errorContent.innerText = '用户名格式输入错误！！'
+            : errorContent.innerText = ''
+    })
+</script>
+</html>

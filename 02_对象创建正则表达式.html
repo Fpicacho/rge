@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p class="text">
+    正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某
+    个串中取出符合某个条件的子串等。
+</p>
+</body>
+<script>
+    const inputValue = prompt('请输入查询内容')
+    const text = document.querySelector('.text')
+    const Regexp = new RegExp(inputValue,'g')
+    text.innerHTML = text.innerHTML.replace(Regexp,str=>{
+        return `<span style="color: red">${str}</span>`
+    })
+</script>
+</html>
